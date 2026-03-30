@@ -1,0 +1,38 @@
+﻿{
+    "paths":  {
+                  "/health":  {
+                                  "get":  {
+                                              "summary":  "Health check",
+                                              "responses":  {
+                                                                "200":  {
+                                                                            "description":  "Service is UP"
+                                                                        }
+                                                            }
+                                          }
+                              },
+                  "/":  {
+                            "post":  {
+                                         "summary":  "Create new item",
+                                         "responses":  {
+                                                           "201":  {
+                                                                       "description":  "Created"
+                                                                   }
+                                                       }
+                                     },
+                            "get":  {
+                                        "summary":  "Get all items",
+                                        "responses":  {
+                                                          "200":  {
+                                                                      "description":  "Success"
+                                                                  }
+                                                      }
+                                    }
+                        }
+              },
+    "openapi":  "3.0.0",
+    "info":  {
+                 "title":  "doctor-service API",
+                 "description":  "Doctor directory and specialization management - Developed by Member 2",
+                 "version":  "1.0.0"
+             }
+}

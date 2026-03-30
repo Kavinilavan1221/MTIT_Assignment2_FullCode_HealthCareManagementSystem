@@ -1,0 +1,38 @@
+﻿{
+    "paths":  {
+                  "/health":  {
+                                  "get":  {
+                                              "summary":  "Health check",
+                                              "responses":  {
+                                                                "200":  {
+                                                                            "description":  "Service is UP"
+                                                                        }
+                                                            }
+                                          }
+                              },
+                  "/":  {
+                            "post":  {
+                                         "summary":  "Create new item",
+                                         "responses":  {
+                                                           "201":  {
+                                                                       "description":  "Created"
+                                                                   }
+                                                       }
+                                     },
+                            "get":  {
+                                        "summary":  "Get all items",
+                                        "responses":  {
+                                                          "200":  {
+                                                                      "description":  "Success"
+                                                                  }
+                                                      }
+                                    }
+                        }
+              },
+    "openapi":  "3.0.0",
+    "info":  {
+                 "title":  "billing-service API",
+                 "description":  "Invoices and payment processing - Developed by Member 5",
+                 "version":  "1.0.0"
+             }
+}

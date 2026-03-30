@@ -1,0 +1,26 @@
+{
+  "name": "mtit-healthcare-system",
+  "version": "1.0.0",
+  "description": "MTIT Healthcare Microservices Assignment",
+  "main": "index.js",
+  "scripts": {
+    "start:auth": "cd services/auth-service && npm start",
+    "start:patient": "cd services/patient-service && npm start",
+    "start:doctor": "cd services/doctor-service && npm start",
+    "start:appointment": "cd services/appointment-service && npm start",
+    "start:prescription": "cd services/prescription-service && npm start",
+    "start:billing": "cd services/billing-service && npm start",
+    "start:lab-report": "cd services/lab-report-service && npm start",
+    "start:gateway": "cd api-gateway && npm start",
+    "start:client": "cd client && npm run dev",
+    "start:backend": "concurrently \"npm run start:auth\" \"npm run start:patient\" \"npm run start:doctor\" \"npm run start:appointment\" \"npm run start:prescription\" \"npm run start:billing\" \"npm run start:lab-report\" \"npm run start:gateway\"",
+    "start:all": "concurrently \"npm run start:backend\" \"npm run start:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "mongoose": "^9.3.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3"
+  }
+}

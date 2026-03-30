@@ -1,0 +1,13 @@
+﻿{
+    "main":  "index.js",
+    "name":  "api-gateway",
+    "version":  "1.0.0",
+    "dependencies":  {
+                         "express":  "^4.18.2",
+                         "express-http-proxy":  "^2.0.0",
+                         "cors":  "^2.8.5"
+                     },
+    "scripts":  {
+                    "start":  "node index.js"
+                }
+}

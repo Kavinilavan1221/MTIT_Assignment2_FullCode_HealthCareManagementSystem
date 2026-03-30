@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f172a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-slate-950 text-slate-100;
+}
+
+#root {
+  width: 100%;
+}
+
+.glass-card {
+  @apply bg-slate-900/50 backdrop-blur-md border border-slate-800 rounded-xl overflow-hidden;
+}
+
+.btn-primary {
+  @apply bg-sky-600 hover:bg-sky-500 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 active:scale-95;
+}
+
+/* Floating Bubbles Animation */
+@keyframes bubble-float {
+  0% { transform: translateY(110vh) scale(0); opacity: 0; }
+  20% { opacity: 0.4; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: bubble-float infinite linear;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 15s; }
+.bubble:nth-child(2) { width: 25px; height: 25px; left: 25%; animation-duration: 12s; animation-delay: 2s; }
+.bubble:nth-child(3) { width: 50px; height: 50px; left: 40%; animation-duration: 20s; animation-delay: 5s; }
+.bubble:nth-child(4) { width: 30px; height: 30px; left: 55%; animation-duration: 18s; animation-delay: 1s; }
+.bubble:nth-child(5) { width: 45px; height: 45px; left: 70%; animation-duration: 16s; animation-delay: 3s; }
+.bubble:nth-child(6) { width: 20px; height: 20px; left: 85%; animation-duration: 14s; animation-delay: 7s; }
+.bubble:nth-child(7) { width: 35px; height: 35px; left: 95%; animation-duration: 19s; animation-delay: 4s; }
+
