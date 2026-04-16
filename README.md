@@ -10,9 +10,7 @@
   - `patient-service`: Member 1 (Port 5001)
   - `doctor-service`: Member 2 (Port 5002)
   - `appointment-service`: Member 3 (Port 5003)
-  - `prescription-service`: Member 4 (Port 5004)
   - `billing-service`: Member 5 (Port 5005)
-  - `lab-report-service`: Member 6 (Port 5006)
 - `client/`: React + Tailwind React Frontend (Vite, Port 5173)
 
 ---
@@ -24,7 +22,7 @@ Open a terminal in the project root and run:
 ```bash
 npm run start:backend
 ```
-*This will start all 6 services and the API Gateway in a single terminal window using `concurrently`.*
+*This will start all 4 services and the API Gateway in a single terminal window using `concurrently`.*
 
 To start **everything** (including the Frontend) in one command:
 ```bash
@@ -55,7 +53,7 @@ For each service, capture:
 ### 3. Frontend Dashboard
 - Open `http://localhost:5173`.
 - Interact with each service (Add a record, Refresh list).
-- Show the "Operational" status icons for all 6 services.
+- Show the "Operational" status icons for all 4 services.
 
 ### 4. Code Structure
 - Screenshot the folder structure to show `services/`, `api-gateway/`, and `client/`.
