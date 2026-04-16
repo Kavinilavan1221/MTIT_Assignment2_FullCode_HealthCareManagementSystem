@@ -53,9 +53,7 @@ const GATEWAY_URL = 'http://localhost:8080';
 const services = [
   { id: 'patient', name: 'Patient Service', icon: Users, port: 5001, member: 'Member 1', path: '/patient', color: '#0ea5e9' },
   { id: 'doctor', name: 'Doctor Service', icon: UserPlus, port: 5002, member: 'Member 2', path: '/doctor', color: '#6366f1' },
-  { id: 'prescription', name: 'Prescription Service', icon: FileText, port: 5004, member: 'Member 4', path: '/prescription', color: '#f59e0b' },
   { id: 'billing', name: 'Billing Service', icon: CreditCard, port: 5005, member: 'Member 5', path: '/billing', color: '#ec4899' },
-  { id: 'lab-report', name: 'Lab Report Service', icon: Activity, port: 5006, member: 'Member 6', path: '/lab-report', color: '#ef4444' },
 ];
 
 const mockChartData = [
@@ -244,15 +242,7 @@ function Dashboard() {
             </label>
           </>
         );
-      case 'prescription':
-        return (
-          <>
-            <input type="text" placeholder="Patient ID" value={newItem.patientId || ''} onChange={e => setNewItem({...newItem, patientId: e.target.value})} required className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <input type="text" placeholder="Medication Name" value={newItem.medication || ''} onChange={e => setNewItem({...newItem, medication: e.target.value})} required className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <input type="text" placeholder="Dosage (e.g., 500mg twice a day)" value={newItem.dosage || ''} onChange={e => setNewItem({...newItem, dosage: e.target.value})} className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <input type="date" value={newItem.date || ''} onChange={e => setNewItem({...newItem, date: e.target.value})} className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-400" />
-          </>
-        );
+
       case 'billing':
         return (
            <>
@@ -261,15 +251,7 @@ function Dashboard() {
             <input type="date" value={newItem.date || ''} onChange={e => setNewItem({...newItem, date: e.target.value})} className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-400" />
           </>
         );
-      case 'lab-report':
-         return (
-           <>
-            <input type="text" placeholder="Patient ID" value={newItem.patientId || ''} onChange={e => setNewItem({...newItem, patientId: e.target.value})} required className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <input type="text" placeholder="Test Name" value={newItem.testName || ''} onChange={e => setNewItem({...newItem, testName: e.target.value})} required className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <textarea placeholder="Test Results/Summary..." value={newItem.result || ''} onChange={e => setNewItem({...newItem, result: e.target.value})} rows="3" className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-700 mb-4" />
-            <input type="date" value={newItem.date || ''} onChange={e => setNewItem({...newItem, date: e.target.value})} className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-all placeholder:text-slate-400" />
-          </>
-        );
+
       default: return null;
     }
   };

@@ -1,4 +1,8 @@
-﻿{
+{
+    "servers": [
+        { "url": "http://localhost:8080/appointment", "description": "API Gateway" },
+        { "url": "http://localhost:5003", "description": "Direct Access" }
+    ],
     "paths":  {
                   "/health":  {
                                   "get":  {

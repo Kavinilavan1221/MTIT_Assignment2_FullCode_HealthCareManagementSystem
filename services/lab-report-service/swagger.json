@@ -1,4 +1,8 @@
-﻿{
+{
+    "servers": [
+        { "url": "http://localhost:8080/lab-report", "description": "API Gateway" },
+        { "url": "http://localhost:5006", "description": "Direct Access" }
+    ],
     "paths":  {
                   "/health":  {
                                   "get":  {

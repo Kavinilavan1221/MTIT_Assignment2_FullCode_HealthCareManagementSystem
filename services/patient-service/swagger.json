@@ -1,7 +1,12 @@
-﻿{
+{
+    "servers": [
+        { "url": "http://localhost:8080/patient", "description": "API Gateway" },
+        { "url": "http://localhost:5001", "description": "Direct Access" }
+    ],
     "paths":  {
                   "/health":  {
                                   "get":  {
+                                              "tags": ["Health"],
                                               "summary":  "Health check",
                                               "responses":  {
                                                                 "200":  {
@@ -12,6 +17,7 @@
                               },
                   "/":  {
                             "post":  {
+                                         "tags": ["Patients"],
                                          "summary":  "Create new item",
                                          "responses":  {
                                                            "201":  {
@@ -20,6 +26,7 @@
                                                        }
                                      },
                             "get":  {
+                                        "tags": ["Patients"],
                                         "summary":  "Get all items",
                                         "responses":  {
                                                           "200":  {
